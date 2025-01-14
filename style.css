@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #00bcd4;  /* light teal */
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 4vw; /* Relative to viewport width */
+    margin: 30px 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.currency {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #ee0a0a; /* Light red */
+    border: 1px solid #74ce83;
+    border-radius: 10px;
+    padding: 30px;
+    color: rgb(70, 20, 248);
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.currency:hover {
+    transform: translateY(-5px); /* Hover effect for the currency container */
+}
+
+select, input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+select:focus, input:focus {
+    border-color: #74ce83;
+    outline: none;
+}
+
+.swap-rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.btn {
+    background-color: #0818f0; /* Soft red */
+    color: rgb(0, 0, 14);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0c24f7; /* Darkened soft red on hover */
+    color: white; /* White text on hover for contrast */
+    transform: scale(1.05);
+}
+
+
+
+.rate {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#currency-one, #currency-two {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #ddd;
+    color: #6a4f4b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .currency {
+        width: 100%;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 6vw; /* Responsive font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 8vw; /* More responsive for small screens */
+    }
+}
